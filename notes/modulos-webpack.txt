@@ -1,0 +1,81 @@
+
+node Js
+    permitecorrer codigo de jS del lado del servidor y se puede crear todo el front y back en Js
+
+babel
+    combierte todo el codigo moderno de Js en codigo viejitos
+
+WEBPACK
+    Ventajas    
+        gestiona dependencias (modulos)
+        monta servidores de desarrollo y pruevas
+        carga modulos de diferentes paquetes o archivos
+        convierte a diferentes formatos con plug.in
+        minimiza el codigo
+        compila SASS a CSS
+        compila de typeScript a JavaScript
+        nos permite trabajar con JS moderno
+
+  Desventajas
+        la configuracion inicial es muy tardada
+        puede ser complicado detectar cuando un paquete falla
+
+tryshakeing     se borra lodo lo que no sirve
+
+geerador de paquetes
+//ventana de terminal
+
+(1) npm init                                      //  crea el package.json el cuaal dice como
+                                                      funciona la aplicacion que dependencias se usan y asi
+                                                      al iniciar pregunta la terminal sobre los datos 
+                                                      estos se pueden cambiar directamente en el archivos
+                                                      -> Crea la carpeta node_modules
+
+(2) npm install webpack webpack-cli --save-dev    // inicia el webpack
+                                                      el webpack solo se utiliza en desarrollo y no manda 
+                                                      las dependencias a producion
+
+(3) "build": "webpack"                            // en el archivo package.json
+                                                      en el area de scripts abajo de "test"
+
+(4) npm run build                                 // En ternmal -> ejecuta es escript buld de construccion
+                                                      -> Crea la carpeta dist (distibution)
+                                                      se modifica el html para que lea el archivo main en dist
+
+(5) webpack.config.jS                             // Archivo de configuracion del webpack  
+
+(6) Configuracion de reglas                       // una exprecion regular or sirve para buscar 
+                                                      partes de string
+
+(7) webpack-web-servidores                        // Crea un servidor local para pruebas
+                                                      se instala y se crea su script en el config.json
+                                                      webpack-web-server en automatico recarga la pagina 
+                                                                        asi mustra inmediatamente los cambios
+
+(8) npm start                                      // Desde la terminal 
+                                                        monta el servidor segun las especificaciones en el script 
+
+(9) npm install --save-dev css-loader               // instala css-loader necesario para cargar los archivos .css
+
+(10) npm install --save-dev style-loader             // insstala el style-loader nesesario para cargar los estilos al server
+
+(11) nueva regla en webpack.config.jS               // se crea una nueva regla en el webpack.config.js para poder
+                                                        poder cargar los archivos de estilo al 
+                                                        
+(12) npm install --save-dev mini-css-extract-plugin  // istala un plugin para los archivos css
+                                                        se configura en el webpack.config.js
+                                                        esto agrega un css al html y lo transforma en un archivo
+                                                        unificado de todos los css al dist
+
+(13) webpack.config.js                               // se crea una nueva regla para usar el pulgin css extract 
+
+(14) npm install file-loader --save-dev                 // en terminal se intala el modulo que ayudara a cargar los recursos
+                                                            estaticos
+
+(15) webpack.config.js                                      // se crea las reglas para utilizar el modulo 
+                                                                file-loader 
+
+(16) npm install copy-webpack-plugin --save-dev         // en la consola se instala el pugin para poder copiar los                          
+                                                            recursos estaticos
+
+(17) webpack.conjs                                      // se agrega el pugin y las reglas del mismo
